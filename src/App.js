@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import SeccionPruebas from "./components/SeccionPruebas";
+import Peliculas from "./components/Peliculas";
 
 function HolaMundo(age, nombre) {
   const presentacion = (
@@ -21,12 +21,14 @@ function HolaMundo(age, nombre) {
 }
 
 function App() {
+  const buttonString = "Ir al blog";
+
   return (
     <div className="App">
       <Header />
-      <Slider />
+      <Slider title="Bienvenido al curso de react" buttonString={ buttonString }/>
       <div className="center">
-        <SeccionPruebas />
+        <Peliculas />
         <Sidebar />
         <div className="clearfix"></div>
       </div>

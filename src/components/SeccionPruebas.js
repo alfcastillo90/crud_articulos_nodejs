@@ -1,9 +1,32 @@
 import React, { Component } from 'react';
 import MiComponente from "./MiComponente";
 import Peliculas from "./Peliculas";
-import logo from "../assets/images/logo.svg";
 
 class SeccionPruebas extends Component {
+    contador = 0;
+
+    // constructor(props) {
+    //     super(props)
+
+    //     this.state = {
+    //         contador:0
+    //     };
+    // }
+
+    state = {
+        contador: 0
+    };
+
+    sumar = (e) => {
+        this.setState({
+            contador: (this.state.contador + 1)
+        });
+    }
+    restar = (e) => {
+        this.setState({
+            contador: (this.state.contador - 1)
+        });
+    }
     HolaMundo(nombre, age) {
         const presentacion = (
             <div>
@@ -16,8 +39,6 @@ class SeccionPruebas extends Component {
     }
 
     render() {
-        const nombre = "Carlos Alfredo Castillo Rodríguez";
-
         return (
             <section id="content">
                 <h2 className="subheader">Últimos artículos</h2>
@@ -25,9 +46,13 @@ class SeccionPruebas extends Component {
                 <h2 className="subheader">Funciones y JSX basíco</h2>
                 <section className="componentes">
                     <MiComponente />
-                    <Peliculas />
                 </section>
-                <h2 className="subheader">Funciones y JSX basíco</h2>
+                <h2 className="subheader">Estado</h2>
+                <p>{ this.state.contador }</p>
+                {/* <input type="button" value="Sumar" onClick={ this.sumar.bind(this) }/>
+                <input type="button" value="Restar" onClick={ this.restar.bind(this) }/> */}
+                <input type="button" value="Sumar" onClick={ this.sumar }/>
+                <input type="button" value="Restar" onClick={ this.restar }/>
             </section>
         );
     }
