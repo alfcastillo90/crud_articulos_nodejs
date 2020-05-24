@@ -10,7 +10,7 @@ class Home extends Component {
                 <Slider title="Bienvenido al curso de react" buttonString="Ir al blog" size="slider-big"/>
                 <div className="center">
                     <div id="content">
-                        <h1 class="subheader">Últimos artículos</h1>
+                        <h1 className="subheader">Últimos artículos</h1>
                     </div>
                     <Sidebar />
                 </div>

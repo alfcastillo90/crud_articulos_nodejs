@@ -86,7 +86,7 @@ class Peliculas extends Component {
         return (
             <div id="peliculas">
                 <Slider title="peliculas" size="slider-small" />
-                <div class="center">
+                <div className="center">
                     <div id="content" className="peliculas">
                         <h2 className="subheader">Listado de Películas</h2>
                         <p>Selección de las peliculas favoritas de {this.state.nombre}</p>

@@ -39,7 +39,7 @@ class Router extends Component {
 
                             return (
                                 <div id="content">
-                                    <h1 class="subheader">Página de pruebas</h1>
+                                    <h1 className="subheader">Página de pruebas</h1>
                                     <h2>
                                         {nombre && !apellidos &&
                                             <React.Fragment>{ nombre }</React.Fragment>
