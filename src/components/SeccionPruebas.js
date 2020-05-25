@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MiComponente from "./MiComponente";
-import Peliculas from "./Peliculas";
 
 class SeccionPruebas extends Component {
     contador = 0;

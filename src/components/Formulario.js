@@ -12,7 +12,6 @@ class Formulario extends Component {
     state = {
         user: {}
     }
-
     recibirFormulario = (e) => {
         e.preventDefault();
         let genero = 'hombre';
@@ -56,32 +55,31 @@ class Formulario extends Component {
                             </div>
                         }
                         <form className="mid-form" onSubmit={this.recibirFormulario}>
-                        <div className="form-group">
-                            <label htmlFor="nombre">Nombre</label>
-                            <input type="text" name="nombre" ref={ this.nombreRef }onChange={ this.recibirFormulario } required/>
-                        </div>
+                            <div className="form-group">
+                                <label htmlFor="nombre">Nombre</label>
+                                <input type="text" name="nombre" ref={ this.nombreRef } onChange={ this.recibirFormulario } required/>
+                            </div>
 
-                        <div className="form-group">
-                            <label htmlFor="apellidos">Apellidos</label>
-                            <input type="text" name="apellidos" ref={ this.apellidoRef }onChange={ this.recibirFormulario } required/>
-                        </div>
+                            <div className="form-group">
+                                <label htmlFor="apellidos">Apellidos</label>
+                                <input type="text" name="apellidos" ref={ this.apellidoRef }onChange={ this.recibirFormulario } required/>
+                            </div>
 
-                        <div className="form-group">
-                            <label htmlFor="bio">Biografia</label>
-                            <textarea name="bio" ref={ this.bioRef } onChange={ this.recibirFormulario } required></textarea>
-                        </div>
+                            <div className="form-group">
+                                <label htmlFor="bio">Biografia</label>
+                                <textarea name="bio" ref={ this.bioRef } onChange={ this.recibirFormulario } required></textarea>
+                            </div>
 
-                        <div className="form-group radibuttons">
-                            <input type="radio" name="genero" value="hombre" ref={ this.generoHombreRef } onChange={ this.recibirFormulario }/> Hombre 
-                            <input type="radio" name="genero" value="mujer" ref={ this.generoMujerRef } onChange={ this.recibirFormulario }/> Mujer 
-                            <input type="radio" name="genero" value="otro" ref={ this.generoOtroRef } onChange={ this.recibirFormulario }/> Otro
-                        </div>
+                            <div className="form-group radibuttons">
+                                <input type="radio" name="genero" value="hombre" ref={ this.generoHombreRef } onChange={ this.recibirFormulario }/> Hombre 
+                                <input type="radio" name="genero" value="mujer" ref={ this.generoMujerRef } onChange={ this.recibirFormulario }/> Mujer 
+                                <input type="radio" name="genero" value="otro" ref={ this.generoOtroRef } onChange={ this.recibirFormulario }/> Otro
+                            </div>
 
-                        <div className="clearfix"></div>
+                            <div className="clearfix"></div>
 
-                        <input type="submit" value="Enviar" className="btn btn-success" />
-
-                   </form>
+                            <input type="submit" value="Enviar" className="btn btn-success" />
+                        </form>
                     </div>
                     <Sidebar blog="true"/>
                 </div>

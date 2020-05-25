@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import SeccionPruebas from './components/SeccionPruebas';
 import MiComponente from './components/MiComponente';
 import Error from './components/Error'
@@ -9,7 +9,10 @@ import Home from './components/Home';
 import Blog from './components/Blog';
 import Peliculas from './components/Peliculas';
 import Formulario from './components/Formulario';
-
+import Search from './components/Search';
+import Article from './components/Article';
+import CreateArticle from './components/CreateArticle';
+import EditArticle from './components/EditArticle';
 class Router extends Component {
     render() {
         return (
@@ -20,9 +23,19 @@ class Router extends Component {
                     <Switch>
                         <Route exact path="/" component= { Home } />
                         <Route exact path="/blog" component= { Blog } />
+                        <Route exact path="/blog/articulo/:id" component= { Article } />
+                        <Route exact path="/blog/busqueda/:search" component= { Search } />
+                        <Route exact path="/blog/crear" component= { CreateArticle } />
+                        <Route exact path="/blog/editar/:id" component= { EditArticle } />
                         <Route exact path="/formulario" component= { Formulario } />
                         <Route exact path="/home" component= { Home } />
                         <Route exact path="/peliculas" component= { Peliculas } />
+                        <Route exact path="/redirect/:search" render= {
+                            (props) => {
+                               var search = props.match.params.search;
+                               return <Redirect to= { '/blog/busqueda/' + search } />;
+                            }
+                        }/>
 
                         {/* Rutas de pruebas */}
                         <Route exact path="/ruta-prueba" component={ SeccionPruebas } />
